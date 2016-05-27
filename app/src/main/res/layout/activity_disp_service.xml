@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_service_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"/>
+
+    <View
+        android:id="@+id/view_ble_con_status_line"
+        android:layout_below="@id/activity_service_toolbar"
+        android:layout_width="match_parent"
+        android:background="#FF0000"
+        android:layout_height="2dp"/>
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="222dp"
+        android:layout_height="222dp"
+        android:layout_below="@id/view_ble_con_status_line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <com.timqi.sectorprogressview.ColorfulRingProgressView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/colorful_ring_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:bgColor="#e1e1e1"
+            app:fgColorEnd="#ff4800"
+            app:fgColorStart="#ffe400"
+            app:percent="0"
+            app:startAngle="0"
+            app:strokeWidth="10dp" />
+
+        <TextView
+            android:id="@+id/tv_batt_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0%"
+            android:textSize="@dimen/txt_default_size" />
+
+        <TextView
+            android:id="@+id/tv_batt_cap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="@string/txt_batt_cap"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_batt_volt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:text="0V"
+            android:textSize="@dimen/txt_default_size"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/framelayout"
+        android:layout_marginTop="@dimen/widget_margin_top">
+
+        <View
+            android:layout_width="match_parent"
+            android:background="#AAAAAA"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:text="@string/txt_output_volt"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"/>
+
+        <TextView
+            android:id="@+id/tv_output_volt"
+            android:text="0V"
+            android:textSize="@dimen/txt_default_size"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/widget_margin_top"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="#AAAAAA"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:text="@string/txt_output_curt"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"/>
+        <TextView
+            android:id="@+id/tv_output_curt"
+            android:text="0A"
+            android:textSize="@dimen/txt_default_size"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/widget_margin_top"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

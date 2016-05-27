@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_bluetooth_refresh"
+        app:showAsAction="ifRoom"
+        android:title="Refresh" />
+    <item
+        android:id="@+id/action_bluetooth_scan"
+        android:title="开始扫描"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_bluetooth_stop"
+        android:title="停止扫描"
+        app:showAsAction="ifRoom" />
+</menu>
